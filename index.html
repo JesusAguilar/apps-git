@@ -38,6 +38,9 @@ function MM_swapImage() { //v3.0
   var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
    if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
 }
+ function playSound () {
+    document.getElementById('play').play();
+}
     </script>
 
 
@@ -52,8 +55,9 @@ function MM_swapImage() { //v3.0
 
      </div>
      <div>
-      <ul data-role="listview" data-theme="a" class="ui-listview ui-group-theme-b" onclick="vibrar(); return false;" >
-      <li class="ui-first-child ui-last-child">
+      <ul data-role="listview" data-theme="a" class="ui-listview ui-group-theme-b" onclick="vibrar()" >
+      <audio id="play" src="http://www.soundjay.com/button/beep-07.wav"></audio>
+      <li class="ui-first-child ui-last-child" onclick="playSound()">
       	  <a href="#Pagina1" class="ui-btn ui-btn-icon-right ui-icon-carat-r" onclick="vibrar(); return false;" >
              <h2>1.-Programacion en Java</h2>
              <p><strong>Autor</strong>: C. Thomas Wu</p>
